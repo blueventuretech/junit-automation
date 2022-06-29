@@ -3,14 +3,14 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase'){
+        stage('Checkout Codebase1'){
             steps{
                 cleanWs()
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
                 [[ url: 'git@github.com:blueventuretech/junit-automation.git']]]
             }
         }
-
+/*
         stage('Build'){
             steps{
                 sh 'mkdir lib'
@@ -32,5 +32,5 @@ pipeline {
             }
         }
     }
-
+*/
 }
