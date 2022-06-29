@@ -31,6 +31,7 @@ pipeline {
                 sh 'cd src/ ; java App' 
             }
         }
+        */
     }
-*/
+
 }
