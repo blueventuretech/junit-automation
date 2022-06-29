@@ -6,8 +6,10 @@ pipeline {
         stage('Checkout Codebase1'){
             steps{
                 cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [[ url: 'git@github.com:blueventuretech/junit-automation.git']]]
+                //checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
+                //[[ url: 'git@github.com:blueventuretech/junit-automation.git']]]
+
+                 git branch: 'main', credentialsId: 'how2coding_github_token', url: 'https://github.com/blueventuretech/junit-automation.git'
             }
         }
 /*
